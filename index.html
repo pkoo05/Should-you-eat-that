@@ -44,9 +44,15 @@ Known Issues:
         } <!-- How many times there is a yes-->
 
         function noAdd(){
-            no_count = no_count + 1;
+            cyclospora_no = cyclospora_no + 1;
         } <!-- How many times the count is no-->
 
+function outputResults(){
+		var percent_cyclospora = cyclospora_yes/(cyclospora_yes + cyclospora_no)*100; // This line converts the cyclospora_yes into a percentage
+		var percent_no = cyclospora_no/(cyclospora_yes + cyclospora_no)*100; // This line converts the cyclospora_no into a percentage
+		var resultsText = document.getElementById("resultsLocation"); // creates a java script link between the variable called "resultsText" and the page element with id of resultsLocation
+		resultsLocation.innerHTML = "Probability that your food is high risk for cyclospora = " + percent_cyclospora + "% <br> Probability that your food is low risk for cyclospora = " + percent_no + "%" //This line replaces the text from the Results Page with the diagnosis
+			
   </script>
 
 
