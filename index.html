@@ -25,7 +25,7 @@ Known Issues:
 -->
 	
    <head> 
-      <title>Cold or Allergy</title>  
+      <title>How safe is your food?</title>  
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="mobile-web-app-capable" content="yes">
       <link rel="stylesheet" href="w3.css">
@@ -34,17 +34,17 @@ Known Issues:
 
 
 <script>
-        var allergy_count = 0;
-        var cold_count = 0;
+        var cyclospora_yes = 0;
+        var cyclospora_no = 0;
 
 
-        function allergyAdd(){
-            allergy_count = allergy_count + 1;
+        function cyclosporaAdd(){
+            yes_count = yes_count + 1;
 		alert(allergy_count);
         }
 
-        function coldAdd(){
-            cold_count = cold_count + 1;
+        function noAdd(){
+            no_count = no_count + 1;
         }
 
   </script>
@@ -74,11 +74,15 @@ Known Issues:
 
 <body>
 <div id="header" class="w3-container w3-flat-carrot">
-	<h1>Cold or Allergies!?</h1>
+	<h1>How safe is your food</h1>
 </div>
 	
 <div id="content" class="w3-container">
-	<p>Are you feeling like you might have a cold but wonder if it is allergies. Answer a few short questions to find out!</p>
+	<p>There is a wave of cyclosporiasis currently happening in the United States. Cyclosporiasis is caused by a parasite called Cyclospora. Symptoms of cyclosporiasis include watery diarrhea that relapses multiple times, nausea, fatigue, and stomach cramping among others.
+	
+	Cyclosporiasis is typically contracted when someone eats cyclospora oocysts in their food.
+	
+	This app will help you determine what the risk of contracting cyclospora from your food and how to minimize the likelihood of illness. </p>
 	
 	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a>
 	
@@ -93,10 +97,13 @@ Known Issues:
 	</div>
 	
     	<div id="content" class="w3-container">
-        <p>Put Question 1 content here.</p>    
+        <p>Is your food raw or cooked?
+		</p></p>   
+			<a href="#three" onclick="cyclosporaAdd();" class="w3-btn w3-orange"> Raw </a> <!-- Create Yes button for Q2. If clicked, adds one to cold_count-->
+		<a href="#three" onclick="allergyAdd();" class="w3-btn w3-orange"> Cooked </a> <!-- Create No button for Q2. If clicked, adds one to allergy_count-->
     	</div>
-</div>
 
+	
 <div class="page" id="two">
 	<div class="w3-container w3-flat-carrot">
 		<h1>Question 2</h1>
