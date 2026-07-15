@@ -34,18 +34,18 @@ Known Issues:
 
 
 <script>
-        var cyclospora_yes = 0; <!-- Counts how many times that the answer is likely for cyclospora-->
-        var cyclospora_no = 0; <!-- Counts how many times the answer is not likely for cyclospora-->
+        var cyclospora_yes = 0; // Counts how many times that the answer is likely for cyclospora
+        var cyclospora_no = 0; // Counts how many times the answer is not likely for cyclospora
 
 
         function cyclosporaAdd(){
             cyclospora_yes = cyclospora_yes + 1;
 		alert(cyclospora_yes);
-        } <!-- How many times there is a yes-->
+        } // How many times there is a yes
 
         function noAdd(){
             cyclospora_no = cyclospora_no + 1;
-        } <!-- How many times the count is no-->
+        } //How many times the count is no
 
 		function outputResults(){
 			var percent_cyclospora = cyclospora_yes/(cyclospora_yes + cyclospora_no)*100; // This line converts the cyclospora_yes into a percentage
